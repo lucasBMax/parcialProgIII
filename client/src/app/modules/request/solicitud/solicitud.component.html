@@ -1,0 +1,91 @@
+<div class="container">
+    <h2>
+        <strong>Formulario de solicitud</strong>
+    </h2>
+    <form class="col s12" [formGroup]="requestFormGroup" (ngSubmit)="saveNewRequest()">
+        <div class="row">
+            <div class="input-field col s6">
+                <input formControlName="nameClient" id="nameClient" type="text" class="validate">
+                <label for="nameClient" style="color:#039be5;">Nombre Completo</label>
+            </div>
+            <div class="errorContainer" *ngIf="(nameClient.touched || nameClient.dirty) && nameClient.invalid">
+                <div *ngIf="nameClient.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="docClient" id="docClient" type="text" class="validate">
+                <label for="docClient" style="color:#039be5;">Documentos</label>
+            </div>
+            <div class="errorContainer" *ngIf="(docClient.touched || docClient.dirty) && docClient.invalid">
+                <div *ngIf="docClient.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input formControlName="brand" id="brand" type="text" class="validate">
+                <label for="brand" style="color:#039be5;">Marca</label>
+            </div>
+            <div class="errorContainer" *ngIf="(brand.touched || brand.dirty) && brand.invalid">
+                <div *ngIf="brand.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="model" id="model" type="text" class="validate">
+                <label for="model" style="color:#039be5;">Modelo</label>
+            </div>
+            <div class="errorContainer" *ngIf="(model.touched || model.dirty) && model.invalid">
+                <div *ngIf="model.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input formControlName="imei" id="imei" type="number" class="validate">
+                <label for="imei" style="color:#039be5;">Número de imei</label>
+            </div>
+            <div class="errorContainer" *ngIf="(imei.touched || imei.dirty) && imei.invalid">
+                <div *ngIf="imei.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="description" id="description" type="text" class="validate">
+                <label for="description" style="color:#039be5;">Descripción</label>
+            </div>
+            <div class="errorContainer" *ngIf="(description.touched || description.dirty) && description.invalid">
+                <div *ngIf="description.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input formControlName="type" id="type" type="text" class="validate">
+                <label for="type" style="color:#039be5;">Tipo</label>
+            </div>
+            <div class="errorContainer" *ngIf="(type.touched || type.dirty) && type.invalid">
+                <div *ngIf="type.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+            <div class="input-field col s6">
+                <input formControlName="comments" id="comments" type="text" class="validate">
+                <label for="comments" style="color:#039be5;">Comentarios</label>
+            </div>
+            <div class="errorContainer" *ngIf="(comments.touched || comments.dirty) && comments.invalid">
+                <div *ngIf="comments.errors.required" class="card-panel orange">
+                    Este campo es requerido!
+                </div>
+            </div>
+        </div>
+        <button class="btn light-blue darken-4" type="submit">
+            Solicitar
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>

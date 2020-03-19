@@ -1,0 +1,68 @@
+<div class="container">
+    <table class="response-table">
+        <thead>
+            <th>
+                Nombre Cliente
+            </th>
+            <th>
+                Documento Cliente
+            </th>
+            <th>
+                Marca Celular
+            </th>
+            <th>
+                Modelo Celular
+            </th>
+            <th>
+                Imei
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Tipo de Celular
+            </th>
+            <th>
+                Comentarios
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of listaSolicitudes">
+                <td>
+                    {{s.nameClient}}
+                </td>
+                <td>
+                    {{s.docClient}}
+                </td>
+                <td>
+                    {{s.brand}}
+                </td>
+                <td>
+                    {{s.model}}
+                </td>
+                <td>
+                    {{s.imei}}
+                </td>
+                <td>
+                    {{s.description}}
+                </td>
+                <td>
+                    {{s.description}}
+                </td>
+                <td>
+                    {{s.comments}}
+                </td>
+                <td>
+                    <div class="row">
+                        <div class="col s12">
+                            <a class="waves-effect waves-light btn green" (click)="updateSolicitud(s)">
+                                <i class="material-icons right">save</i>
+                                Editar
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
