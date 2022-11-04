@@ -18,7 +18,7 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",
     "loopback-connector-mongodb": "^4.2.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.20",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0"
   },
